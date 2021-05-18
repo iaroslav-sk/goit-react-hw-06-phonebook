@@ -4,7 +4,6 @@ import { AddContact, deleteContact, filteredContact } from './contact-action';
 
 const items = createReducer([], {
   [AddContact]: (state, { payload }) => {
-    console.log(payload);
     const { name } = payload;
     const isFinded = state.find(
       contact => contact.name.toLowerCase() === name.toLowerCase(),
